@@ -6,7 +6,6 @@ import (
 	_ "embed"
 	"fmt"
 	"os"
-	"runtime"
 	"strconv"
 	"time"
 
@@ -73,7 +72,7 @@ var (
 
 func init() {
 	// the default calculation used for migration worker count
-	MigrationMaxWorkerCount = runtime.NumCPU()
+	MigrationMaxWorkerCount = 8
 	// check if an alternative value was request by environment
 	if mwcs := os.Getenv(EnvMigrationMaxWorkerCount); mwcs != "" {
 		mwc, err := strconv.ParseInt(mwcs, 10, 32)
