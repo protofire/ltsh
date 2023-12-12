@@ -134,7 +134,7 @@ var PropagationDelaySecs = uint64(10)
 var EquivocationDelaySecs = uint64(2)
 
 // BootstrapPeerThreshold is the minimum number peers we need to track for a sync worker to start
-const BootstrapPeerThreshold = 4
+const BootstrapPeerThreshold = 3
 
 // ChainId defines the chain ID used in the Ethereum JSON-RPC endpoint.
 // As per https://github.com/ethereum-lists/chains
@@ -142,6 +142,6 @@ const Eip155ChainId = 314159
 
 var WhitelistedBlock = cid.Undef
 
-const F3Enabled = true
+const F3Enabled = false
 const ManifestServerID = "12D3KooWS9vD9uwm8u2uPyJV32QBAhKAmPYwmziAgr3Xzk2FU1Mr"
 const F3BootstrapEpoch abi.ChainEpoch = UpgradeWaffleHeight + 100
